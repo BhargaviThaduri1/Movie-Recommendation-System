@@ -5,8 +5,8 @@ from flask import Flask,render_template,redirect,url_for,request
 
 app = Flask(__name__)
 
-movies = pickle.load(open('pickleFiles/movie_list.pkl', 'rb'))
-similarity = pickle.load(open('pickleFiles/similarity.pkl', 'rb'))
+movies = pickle.load(open('movie_list.pkl', 'rb'))
+similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 movie_list = movies['title'].values
 
