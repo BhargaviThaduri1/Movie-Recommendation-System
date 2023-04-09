@@ -1,4 +1,5 @@
 import pickle
+import streamlit as st
 import requests
 from flask import Flask,render_template,redirect,url_for,request
 
@@ -63,4 +64,6 @@ def getMovie(selected_movie):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True)
+
+
 
