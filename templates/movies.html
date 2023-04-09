@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GetMovie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+        background-color:rgb(38, 33, 46);
+        }
+        h2{
+        color:rgb(96, 248, 139);;
+        }
+        span{
+        text-transform: uppercase;
+        text-decoration: underline;
+        }
+        #movie:hover{
+            cursor:pointer;
+           transform: tra
+
+        }
+         footer{
+        margin:0px;
+        padding:0;
+            color:rgb(113, 164, 128);;
+
+        text-align:center;
+        background-color: hsl(288, 32%, 15%);
+}
+
+    </style>
+</head>
+<body >
+        <div class="container my-4">
+            <h2 class="mt-5">Here are top 5 Recommendations for you related to: <span>{{selected_movie}}</span></h2>
+            <div class="row">
+                <div class="col-sm-4 ">
+                <div class="card mt-3" id="movie">
+                      <img src="{{recommended_movie_posters[0]}}"  style="width: 100%; height: 300px;"class="card-img-top rounded " alt="...">
+                    <div class="card-body">
+                     <h5 class="card-title">{{recommended_movie_names[0]}}</h5>
+                        <p class="card-text">{{taglines[0]}}</p>
+                         <a href="{{urls[0]}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                 </div>
+
+
+                <div class="col-sm-4">
+                <div class="card mt-3">
+                      <img src="{{recommended_movie_posters[1]}}"  style="width: 100%; height: 300px;"class="card-img-top rounded " alt="...">
+                    <div class="card-body">
+                     <h5 class="card-title">{{recommended_movie_names[1]}}</h5>
+                        <p class="card-text">{{taglines[1]}}</p>
+                         <a href="{{urls[1]}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                 </div>
+                <div class="col-sm-4">
+                <div class="card mt-3">
+                      <img src="{{recommended_movie_posters[2]}}"  style="width: 100%; height: 300px;"class="card-img-top rounded " alt="...">
+                    <div class="card-body">
+                     <h5 class="card-title">{{recommended_movie_names[2]}}</h5>
+                        <p class="card-text">{{taglines[2]}}</p>
+                         <a href="{{urls[2]}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                 </div>
+                <div class="col-sm-4">
+                <div class="card mt-3">
+                      <img src="{{recommended_movie_posters[3]}}"  style="width: 100%; height: 300px;"class="card-img-top rounded " alt="...">
+                    <div class="card-body">
+                     <h5 class="card-title">{{recommended_movie_names[3]}}</h5>
+                        <p class="card-text">{{taglines[3]}}</p>
+                         <a href="{{urls[3]}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                 </div>
+                <div class="col-sm-4">
+                <div class="card mt-3">
+                      <img src="{{recommended_movie_posters[4]}}"  style="width: 100%; height: 300px;"class="card-img-top rounded " alt="...">
+                    <div class="card-body">
+                     <h5 class="card-title">{{recommended_movie_names[4]}}</h5>
+                        <p class="card-text">{{taglines[4]}}</p>
+                         <a href="{{urls[4]}}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    <footer class="footer py-1" >
+        Made with Love<br><br>
+        Copyright @2023
+    </footer>
+</body>
+</html>

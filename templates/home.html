@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recommendation System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+         body{
+        background-color:rgb(38, 33, 46);
+        color:white;
+        }
+        h1,h2{
+          color:rgb(96, 248, 139);;
+        }
+        img{
+        border-radius:20px;
+        }
+        p{
+            line-height: 2;
+            padding:5px;
+            font-weight: 100
+
+        }
+        svg{
+        width:30px;
+        height:30px;
+        margin-top:3px;
+        }
+        footer{
+        margin:0px;
+        padding:0;
+            color:rgb(113, 164, 128);;
+
+        text-align:center;
+        background-color: hsl(288, 32%, 15%);
+}
+    </style>
+</head>
+<body>
+<div class="container mt-5 my-5">
+<h1>Content Based Movie Recommendation System</h1>
+<p>Enter the movie which you wish to get similar movies</p>
+
+ <form action = "http://localhost:5000/recommend" method = "post">
+        <select class="form-select" aria-label="Default select example" name="movie">
+            {% for movie in movies %}
+                <option value="{{movie}}">{{movie}}</option>
+            {% endfor %}
+
+        </select>
+         <button class="btn btn-danger mt-4">Recommend Movie</button>
+ </form>
+    <div class="row mt-5 my-5">
+        <img src="static/banner.jpg" alt="" class="rounded col-sm-6">
+        <div class="col-sm-6 text-center mt-1" >
+                    <h2 class="mt-5">About Recommendation</h2>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+              <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"/>
+            </svg>
+            <br>
+            <p class="mt-2">
+            The system starts by collecting data on the movies in the dataset, including their genre, director, cast, and plot summary. This data is then preprocessed and transformed into numerical vectors using techniques such as bag-of-words and TF-IDF. These vectors are then used to calculate similarity scores between movies using cosine similarity or other distance metrics. When a user enters their movie preferences into the system, the system compares the user's preferences to the preprocessed data and calculates similarity scores between the user's preferred movies and the other movies in the dataset. The system then recommends the top-rated movies that are most similar to the user's preferences.
+            </p>
+        </div>
+    </div >
+    <div class="row mt-5 ">
+        <div class="col-sm-6 text-center mt-1" >
+            <h2 class="mt-5">Why Content Based?</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+              <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"/>
+            </svg>
+            <br>
+            <p class="mt-2">
+They can make recommendations even for items that are unpopular or niche, as long as the user's preferences match the content of those items. This is in contrast to collaborative filtering systems, which rely on the preferences of other users to make recommendations and can struggle to make accurate recommendations for items that are not widely popular.And also hey do not require any explicit ratings or feedback from users, as they can infer the user's preferences from the content of the items that they have already consumed. This can be particularly useful in cases where users are reluctant to provide ratings or feedback.          </p>
+        </div>
+        <img src="static/movie2.avif" alt="" class="rounded col-sm-6 mh-25">
+    </div >
+
+    </div>
+<footer class="footer py-1" >
+        Made with Love<br><br>
+        Copyright @2023
+    </footer>
+
+</body>
+</html>
