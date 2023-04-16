@@ -1,8 +1,12 @@
 import pickle
 import requests
 from flask import Flask,render_template,redirect,url_for,request
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
 
 app = Flask(__name__)
+
+
 
 movies = pickle.load(open('movie_list.pkl', 'rb'))
 similarity = pickle.load(open('similarity.pkl', 'rb'))
@@ -44,7 +48,11 @@ def Recommend_Funtion(movie):
     return recommended_movie_names,recommended_movie_posters,taglines,urls
 
 
+
+
+
 @app.route('/')
+
 def home():
     return render_template('home.html',movies=movie_list)
 

@@ -7,9 +7,7 @@
         body{
         background-color:rgb(38, 33, 46);
         }
-        h2{
-        color:rgb(96, 248, 139);;
-        }
+
         span{
         text-transform: uppercase;
         text-decoration: underline;
@@ -32,7 +30,8 @@
 </head>
 <body >
         <div class="container my-4">
-            <h2 class="mt-5">Here are top 5 Recommendations for you related to: <span>{{selected_movie}}</span></h2>
+
+            <h2 class="mt-5 text-info">Here are top 5 Recommendations for you related to: <span>{{selected_movie}}</span></h2>
             <div class="row">
                 <div class="col-sm-4 ">
                 <div class="card mt-3" id="movie">
@@ -88,7 +87,7 @@
                  </div>
             </div>
         </div>
-    <footer class="footer py-1" >
+    <footer class="footer py-1 text-info" >
         Made with Love<br><br>
         Copyright @2023
     </footer>
